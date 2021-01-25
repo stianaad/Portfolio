@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState, useCallback} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import CustomizedButton from '../components/CustomizedButton'
@@ -17,48 +17,90 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     backgroundColor: "#50A18A",
     width: '100%',
-    height: '30vh',
+    height: '35vh',
     borderRadius: "0%",
-    borderBottom: "2px solid black"
+    borderBottom: "2px solid black",
+    /*[theme.breakpoints.down('xs')]: {
+      height: '45vh'
+    },*/
   },
   picture: {
-    width: "15vh",
-    height: "20vh",
-    marginLeft: "2vh",
+    width: "20vh",
+    height: "25vh",
+    margin: "auto",
     borderRadius: "50%"
   },
   typography: {
     color: "white",
   },
   gridTypograpyh: {
-    marginTop: "7vh"
+    padding: theme.spacing(1),
+    [theme.breakpoints.down('xs')]: {
+      marginTop: "0vh",
+      textAlign: "center"
+    },
+    [theme.breakpoints.up('sm')]: {
+      marginTop: "7vh"
+    },
+  },
+  box: {
+    [theme.breakpoints.down('xs')]: {
+      marginLeft: "auto",
+      marginRight: "auto"
+    }
+  },
+  buttons: {
+    [theme.breakpoints.down('xs')]: {
+      backgroundColor: "black"
+    }
   }
 }));
 
 export default function Header() {
   const classes = useStyles();
+  const [heightWindow, setHeightWindow] = useState()
 
   const openWebsite = (website) => {
     window.open(website)
   }
 
+  const handleWindowResize = useCallback(event => {
+    const height = document.getElementById('test').getBoundingClientRect().top;
+    console.log(height)
+    document.body.style.height = height
+    setHeightWindow(height);
+}, []); 
+
+
+useEffect(() => {
+  window.addEventListener('resize', handleWindowResize);
+  return () => {
+    window.removeEventListener('resize', handleWindowResize);
+  };
+}, [handleWindowResize]);
+
+  useEffect(() => {
+    const height = document.getElementById('test').getBoundingClientRect().top;
+    setHeightWindow(height)
+  }, [])
+
   return (
-      <Paper elevation={3} className={classes.paper}>
-        <Grid container >
+      <Paper elevation={3} className={classes.paper} style={{height: (heightWindow+60).toString()+"px"}}>
+        <Grid container>
           <Grid item xs={12}>
             <CustomizedButton name="LINKEDIN" icon={LinkedInIcon} onClick={() => openWebsite("https://www.linkedin.com/in/stianaad/")}/>
             <CustomizedButton name="GITHUB" icon={GitHubIcon} onClick={() => openWebsite("https://github.com/stianaad")}/>
             <CustomizedButton name="CV" icon={DescriptionIcon} onClick={() => openWebsite(CV)}/>
           </Grid>
-          <Grid item xs={4}>
+          <Grid container item sm={4} xs={12} alignContent="space-around">
             <Avatar alt="Picture of Stian" src={Portrait} className={classes.picture}/>
           </Grid>
-          <Grid item xs={8} className={classes.gridTypograpyh}>
+          <Grid item sm={8} xs={12} className={classes.gridTypograpyh}>
             <Typography variant="h4" className={classes.typography}>Stian Ådnanes</Typography>
-            <Box borderTop='2px solid #A15067' marginTop='-2px' width='25vh'></Box>
-            <Box borderTop='1px solid #A15067' marginTop='2px' marginBottom="2vh" width='25vh'></Box>
+            <Box borderTop='2px solid #A15067' marginTop='-2px' className={classes.box} width='28vh'></Box>
+            <Box borderTop='1px solid #A15067' marginTop='2px' className={classes.box} marginBottom="2vh" width='28vh'></Box>
             <Typography variant="h6" className={classes.typography}>Currently studing software development at NTNU</Typography>
-            <Typography variant="h6" className={classes.typography}>Full-stack developer</Typography>
+            <Typography variant="h6" id="test" className={classes.typography}>Full-stack developer</Typography>
           </Grid>
         </Grid>
       </Paper>

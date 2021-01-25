@@ -14,7 +14,12 @@ const useStyles = makeStyles((theme) => ({
     //maxWidth: "10vh"
     borderRadius: "50px",
     margin: theme.spacing(1),
-    float: "right"
+    [theme.breakpoints.down('xs')]: {
+      float: 'right'
+    },
+    [theme.breakpoints.up('sm')]: {
+      float: "right"
+    }
   },
 }))
 
