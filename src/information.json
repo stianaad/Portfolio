@@ -1,0 +1,43 @@
+[ {
+  "title" : "EE - Easier Economy",
+  "description": "This is an ongoing project which I am creating to make everyday life easier. The application is helping you to choose what to have to dinner, what ingredients you need to buy in the store and how much money you use. Created with Vue and Spring Boot.",
+  "github": "https://github.com/stianaad/Easier-Economy---JavaVue",
+  "imageUrl": "hero"
+  },
+  {
+  "title" : "Portfolio",
+  "description": "Created a portfolio with React to keep track of all my latest projects. The data is stored in a firebased database, and the design is created with Material UI.",
+  "github": "https://github.com/stianaad/Portfolio",
+  "imageUrl": "portfolio"
+  },
+  {
+  "title" : "Embicon",
+  "description": "Summer intern for Embicon. The project was to upgrade an old system which kept track of all the documents related to a specific ship. The system was upgraded to a web application which used React, and Express/Node on backend.",
+  "github": null,
+  "imageUrl": "embicon"
+  },
+  {
+  "title" : "Fagweb",
+  "description": "My bachelor thesis was written for Norconsult Information Systems. The project was to create a system which kept track of all the course activities to the consultants. In this project I used technologies such as ASP.NET, Azure and React.js.",
+   "github": null,
+   "imageUrl": "nois"
+  },
+  {
+    "title" : "CSV converter",
+    "description": "Summer intern for Salt Ship Design. The assignment was to create a plugin which could read CSV-files in different formats and present the output on a web application. Developed with Vue and PHP",
+    "github": null,
+    "imageUrl": "salt"
+  },
+  {
+    "title" : "Hverdagshelt",
+    "description": "Project in TDAT2003 - Software development. The project was to create a website where the inhabitants of a city was able to submit errors and omissions which occured in the city. Developed with JavaScript and Express/Node.",
+    "github": "https://github.com/stianaad/Hverdagshelt",
+    "imageUrl": "hero"
+  },
+  {
+    "title" : "Nettavis",
+    "description": "Project in TDAT2003 - Software development. The assignment was to created an online newspaper with continous integrating through gitlab. Developed with JavaScript, flow and Express/Node",
+    "github": "https://github.com/stianaad/Nettavis",
+    "imageUrl": "newspaper"
+  }
+]
