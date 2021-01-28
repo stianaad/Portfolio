@@ -7,6 +7,7 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Projects from '../components/Projects'
+import Education from '../components/Education'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -56,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Menu() {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(1);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -75,7 +76,7 @@ export default function Menu() {
         <Projects/>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        <Education/>
       </TabPanel>
       <TabPanel value={value} index={2}>
         Item Three

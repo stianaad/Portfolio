@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "0%",
     borderBottom: "2px solid black",
     [theme.breakpoints.down('xs')]: {
-      height: '45vh'
+      height: '50vh'
     },
     [theme.breakpoints.down(minDesktopSize)]: {
       height: '50vh'
