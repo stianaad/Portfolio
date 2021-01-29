@@ -7,7 +7,6 @@ import IconText from './IconText'
 import {makeStyles} from '@material-ui/core/styles'
 import Box from '@material-ui/core/Box'
 import Collapse from '@material-ui/core/Collapse';
-import AnimationNTNU from './AnimationNTNU'
 import Test from './test'
 
 const useStyles = makeStyles(theme => ({

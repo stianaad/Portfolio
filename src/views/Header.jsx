@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
       height: '50vh'
     },
     [theme.breakpoints.down(minDesktopSize)]: {
-      height: '50vh'
+      height: '55vh'
     },
     [theme.breakpoints.down(mobileScreen)]: {
       height: '60vh'
@@ -67,35 +67,10 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Header() {
   const classes = useStyles();
-  //const [heightWindow, setHeightWindow] = useState(300)
 
   const openWebsite = (website) => {
     window.open(website)
   }
-
-  /*const handleWindowResize = useCallback(event => {
-    let height = document.getElementById('subtext').getBoundingClientRect().top;
-    const picture = document.getElementById('picture').getBoundingClientRect();
-    const pictureHeight = picture.height + picture.top
-    if(pictureHeight > height) {
-      height = pictureHeight
-    }
-    document.body.style.height = height
-    setHeightWindow(height);
-}, []); 
-
-
-useEffect(() => {
-  window.addEventListener('resize', handleWindowResize);
-  return () => {
-    window.removeEventListener('resize', handleWindowResize);
-  };
-}, [handleWindowResize]);
-
-  useEffect(() => {
-    handleWindowResize() style={{height: (heightWindow+60).toString()+"px"}}
-  }, [])*/
-
   return (
       <Paper elevation={3} className={classes.paper} >
         <Grid container>
