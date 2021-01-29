@@ -18,7 +18,7 @@ import EasierEconomy from '../assets/easiereconomy.png'
 const useStyles = makeStyles({
   root: {
     maxWidth: "500px",
-    boxShadow: "2px 2px lightgrey",
+    boxShadow: "2px 2px 2px 2px lightgrey",
     width: "auto",
     margin: "5%",
     display: "flex",
@@ -44,15 +44,6 @@ const useStyles = makeStyles({
 export default function ProjectCard({title, description, github, imageUrl}) {
   const classes = useStyles();
   const test = {"nois": Nois, "stian": Picture, "salt": Salt, "embicon": Embicon, "newspaper": Newspaper, "hero": Hero, "portfolio": Portfolio, "easiereconomy": EasierEconomy} 
-  /**
-   * <CardMedia
-          className={classes.media}
-          height="140"
-          image={test[imageUrl]}
-          title="Contemplative Reptile"
-        />
-        
-   */
   return (
     <Card className={classes.root}>
       <CardActionArea>

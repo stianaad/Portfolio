@@ -7,7 +7,7 @@ export default function Projects() {
   return (
     <Grid container>
       {Json.map(e => (
-        <Grid item xs={12} sm={6} md={6} container justify={"center"} key={e.title}>
+        <Grid item xs={12} sm={6} md={6} lg={4} container justify={"center"} key={e.title}>
           <ProjectCard key={e.title} title={e.title} description={e.description} github={e.github} imageUrl={e.imageUrl}/>
         </Grid>
       ))}
