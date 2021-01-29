@@ -10,7 +10,7 @@ import MusicNoteIcon from '@material-ui/icons/MusicNote';
 
 const useStyles = makeStyles((theme) => ({
     interests: {
-      paddingTop: "30px"
+      paddingTop: "30px",
     },
     icon: {
       fontSize: "70px",
@@ -33,7 +33,7 @@ export default function SimpleCollapse() {
          NTNU in programming in python. 
         </Typography>
         <Box className={classes.interests}/>
-        <Typography variant="h6" component={'span'}>
+        <Typography variant="h5" component={'span'}>
           Interests
         </Typography>
         <br/>
