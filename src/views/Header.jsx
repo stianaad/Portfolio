@@ -111,7 +111,7 @@ useEffect(() => {
             <Typography variant="h4" className={classes.typography}>Stian Ådnanes</Typography>
             <Box borderTop='2px solid #A15067' marginTop='-2px' className={classes.box} width='28vh'></Box>
             <Box borderTop='1px solid #A15067' marginTop='2px' className={classes.box} marginBottom="2vh" width='28vh'></Box>
-            <Typography variant="h6" className={classes.typography}>Currently studing software development at NTNU</Typography>
+            <Typography variant="h6" className={classes.typography}>Currently studying software development at NTNU</Typography>
             <Typography variant="h6" id="subtext" className={classes.typography}>Full-stack developer</Typography>
           </Grid>
         </Grid>

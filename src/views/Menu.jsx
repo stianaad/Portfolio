@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import Projects from '../components/Projects'
 import Education from '../components/Education'
+import AboutMe from '../components/AboutMe'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -79,7 +80,7 @@ export default function Menu() {
         <Education/>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+        <AboutMe/>
       </TabPanel>
     </div>
   );
