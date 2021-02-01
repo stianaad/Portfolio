@@ -26,7 +26,7 @@ export default function SimpleCollapse() {
       <Grid item sm={8} xs={12}>
         <Typography variant={"subtitle1"} component={'span'}>
         I’m a software developer in 4th grade computer technology at NTNU. I have gained much experience through 
-        school and summer internships in both front-end and back-end technologies, and is therefore comfortable
+        school and summer internships in both front-end and back-end technologies, and I'm therefore comfortable
          with developing full-stack. Previously, I have had two summer internships as developer at both Salt Ship 
          Design and Embicon. Through these jobs I used modern technologies such as React.js, Vue, Python and 
          PHP to develop web applications. Currently I have three part-time jobs as a teaching assistant at 
