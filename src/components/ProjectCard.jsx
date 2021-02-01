@@ -13,7 +13,7 @@ import Salt from '../assets/salt.jpeg'
 import Newspaper from '../assets/nettavis.jpg'
 import Hero from '../assets/hero.jpeg'
 import Portfolio from '../assets/portfolio.png'
-import EasierEconomy from '../assets/easiereconomy.png'
+import EasierEconomy from '../assets/easiereconomy2.jpg'
 
 const useStyles = makeStyles({
   root: {
@@ -43,7 +43,7 @@ const useStyles = makeStyles({
 
 export default function ProjectCard({title, description, github, imageUrl}) {
   const classes = useStyles();
-  const test = {"nois": Nois, "stian": Picture, "salt": Salt, "embicon": Embicon, "newspaper": Newspaper, "hero": Hero, "portfolio": Portfolio, "easiereconomy": EasierEconomy} 
+  const test = {"nois": Nois, "stian": Picture, "salt": Salt, "embicon": Embicon, "newspaper": Newspaper, "hero": Hero, "portfolio": Portfolio, "easiereconomy2": EasierEconomy} 
   return (
     <Card className={classes.root}>
       <CardActionArea>
